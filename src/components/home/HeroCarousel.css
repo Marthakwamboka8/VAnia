@@ -1,0 +1,151 @@
+.hero{
+    position:relative;
+    width:100%;
+    height:calc(100vh - 88px);
+    overflow:hidden;
+    background:#F7F7F5;
+}
+
+.slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity .6s ease;
+}
+
+.slide.active{
+    opacity:1;
+    z-index:1;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right,
+        rgba(74,42,26,.78),
+        rgba(74,42,26,.35));
+}
+
+.content{
+    position:absolute;
+    top:50%;
+    left:8%;
+    transform:translateY(-50%);
+    width:min(560px, 85%);
+    color:#FFFFFF;
+    z-index:2;
+}
+
+.content h1{
+    font-size:3.5rem;
+    line-height:1.1;
+    margin:18px 0;
+    color:#FFFFFF;
+}
+
+.content p{
+    font-size:1.1rem;
+    line-height:1.7;
+    margin-bottom:32px;
+    color:rgba(255,255,255,0.92);
+}
+
+.content button{
+    background:#1F6B3A;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:600;
+}
+
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:46px;
+    height:46px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    z-index:10;
+}
+
+.left{ left:24px; }
+.right{ right:24px; }
+
+.dots{
+    position:absolute;
+    bottom:28px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:10px;
+    z-index:10;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:rgba(255,255,255,.45);
+}
+
+.dot.active{
+    background:#D9480F;
+}
+
+/* Tablet */
+@media (max-width:992px){
+    .content h1{
+        font-size:2.7rem;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .nav-container{
+        width:100%;
+        padding:14px 16px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .nav-links,
+    .nav-actions{
+        display:none;
+    }
+
+    .navbar-logo{
+        height:48px;
+        width:auto;
+        max-width:140px;
+    }
+
+    .menu-btn{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:none;
+        border:none;
+        font-size:28px;
+        color:#4A2A1A;
+    }
+
+    .mobile-menu{
+        width:100%;
+        left:0;
+        right:0;
+    }
+}

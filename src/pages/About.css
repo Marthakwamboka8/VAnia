@@ -1,0 +1,84 @@
+.about{
+    width:100%;
+    min-height:100vh;
+    background:#F7F7F5;
+}
+
+/* HERO */
+.about-hero{
+    position:relative;
+    width:100%;
+    min-height:92vh;
+    display:flex;
+    align-items:center;
+    background:url("/images/about-hero.jpg") center/cover no-repeat;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(74,42,26,.82) 0%,
+        rgba(74,42,26,.45) 55%,
+        rgba(74,42,26,.20) 100%
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:min(620px, 90%);
+    margin-left:8%;
+    color:#FFFFFF;
+}
+
+.hero-tag{
+    color:#D9480F;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:3px;
+    margin-bottom:18px;
+}
+
+.hero-content h1{
+    font-size:64px;
+    line-height:1.1;
+    margin-bottom:24px;
+    font-weight:700;
+}
+
+.hero-text{
+    font-size:18px;
+    line-height:1.9;
+    color:#F5F5F5;
+}
+
+/* Tablet */
+@media (max-width:992px){
+    .hero-content h1{
+        font-size:48px;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .about-hero{
+        min-height:75vh;
+    }
+
+    .hero-content{
+        width:calc(100% - 40px);
+        margin:0 20px;
+    }
+
+    .hero-content h1{
+        font-size:36px;
+    }
+
+    .hero-text{
+        font-size:16px;
+        line-height:1.7;
+    }
+}
