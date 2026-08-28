@@ -61,7 +61,7 @@ const CTA = () => {
           </p>
 
           <div className="cta-buttons">
-            <Link to="/assistants" className="btn-primary">
+            <Link to="/assistants" className="btn-primary text-center">
               Find an Assistant
             </Link>
 
