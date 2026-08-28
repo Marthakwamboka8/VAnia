@@ -1,5 +1,4 @@
 import Navbar from "../components/layout/Navbar";
-import Footer from "../components/layout/Footer";
 import "./About.css";
 import Story from "../components/about/Story";
 import MissionVision from "../components/about/MissionVision";
@@ -38,8 +37,6 @@ const About = () => {
         <MissionVision/>
         <CTA/>
       </main>
-
-      <Footer />
     </>
   );
 };
