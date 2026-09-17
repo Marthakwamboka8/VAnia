@@ -1,76 +1,207 @@
-.footer{
-    background:#4A2A1A;
-    color:#F7F7F5;
-    margin-top:80px;
+.footer {
+  width: 100%;
+  background: #4a2a1a;
+  color: #ffffff;
 }
 
-.footer-container{
-    max-width:1280px;
-    margin:auto;
-    padding:60px 24px 24px;
+.footer-container {
+  width: 100%;
 }
 
-.footer-top{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:40px;
-    padding-bottom:40px;
-    border-bottom:1px solid rgba(255,255,255,.15);
+.footer-top {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.3fr;
+  gap: 60px;
 }
 
-.footer-brand p{
-    margin-top:18px;
-    line-height:1.8;
-    color:#E7DED8;
-    max-width:320px;
-    font-size:15px;
+/* Brand section */
+
+.footer-brand {
+  padding-right: 35px;
 }
 
-.footer-links h4{
-    margin-bottom:18px;
-    color:#FFFFFF;
-    font-size:16px;
+.footer-brand p {
+  max-width: 360px;
+  margin-top: 25px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.8;
 }
 
-.footer-links a,
-.footer-links p{
-    display:block;
-    margin-bottom:12px;
-    color:#E7DED8;
-    text-decoration:none;
-    font-size:15px;
+/* Platform links */
+
+.footer-links {
+  padding-left: 45px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.footer-links a:hover{
-    color:#D9480F;
+.footer-links h4,
+.footer-contact h4 {
+  margin: 0 0 25px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
-.footer-bottom{
-    padding-top:22px;
-    text-align:center;
-    color:#D8CFC8;
-    font-size:14px;
+.footer-links a {
+  display: block;
+  width: fit-content;
+  margin-bottom: 17px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #d9480f;
+}
+
+/* Contact section */
+
+.footer-contact {
+  padding-left: 45px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.footer-contact p,
+.footer-contact > a {
+  display: block;
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.footer-contact > a {
+  width: fit-content;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contact > a:hover {
+  color: #d9480f;
+}
+
+/* Social media */
+
+.social-heading {
+  margin-top: 35px !important;
+  margin-bottom: 20px !important;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.social-icons a {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #4a2a1a;
+
+  font-size: 1.15rem;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  background: #d9480f;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Bottom section */
+
+.footer-bottom {
+  width: 100%;
+  padding: 24px 20px;
+
+  background: #2f1a12;
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.85rem;
 }
 
 /* Tablet */
-@media(max-width:992px){
 
-    .footer-top{
-        grid-template-columns:1fr 1fr;
-    }
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    padding: 65px 30px;
+  }
 
+  .footer-brand {
+    grid-column: 1 / -1;
+    padding-right: 0;
+  }
+
+  .footer-links,
+  .footer-contact {
+    padding-left: 0;
+    border-left: none;
+  }
 }
 
 /* Mobile */
-@media(max-width:768px){
 
-    .footer-top{
-        grid-template-columns:1fr;
-        gap:32px;
-    }
+@media (max-width: 600px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 55px 24px;
+  }
 
-    .footer-brand p{
-        max-width:100%;
-    }
+  .footer-brand {
+    grid-column: auto;
+  }
 
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .footer-links,
+  .footer-contact {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .footer-links h4,
+  .footer-contact h4 {
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    gap: 12px;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.05rem;
+  }
 }

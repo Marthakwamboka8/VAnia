@@ -4,74 +4,124 @@ import { Link } from "react-router-dom";
 const CTA = () => {
   return (
     <section className="problems">
+
       <div className="section-container">
 
         <div className="section-heading">
-          <p className="section-tag">WHY VANIA</p>
-          <h2>The executive support businesses have been missing.</h2>
+
+          <p className="section-tag">WHAT YOU CAN LET GO OF</p>
+
+          <h2>
+            Your attention belongs where it matters most.
+          </h2>
+
           <p className="section-subtitle">
-            VAnia helps founders, executives and growing teams reclaim their
-            time by providing dependable, proactive virtual assistance.
+            The details behind a successful business matter. But not every
+            detail needs to require your attention. VAnia provides thoughtful
+            support for the work that keeps your day moving, giving you more
+            room to focus on what only you can do.
           </p>
+
         </div>
+
 
         <div className="problem-grid">
 
           <div className="problem-card">
-            <h3>Overloaded schedules</h3>
+
+            <span className="problem-number">01</span>
+
+            <h3>Make space in your calendar.</h3>
+
             <p>
-              Delegate calendar management, meeting coordination and daily
-              administrative work so you can focus on strategic decisions.
+              From scheduling and meeting coordination to reminders and
+              follow-ups, create a little more breathing room in your day.
             </p>
+
           </div>
 
-          <div className="problem-card">
-            <h3>Missed opportunities</h3>
-            <p>
-              Never lose track of follow-ups, emails or client communication
-              with assistants who keep your workflow moving.
-            </p>
-          </div>
 
           <div className="problem-card">
-            <h3>Operational inefficiency</h3>
+
+            <span className="problem-number">02</span>
+
+            <h3>Stay close to what matters.</h3>
+
             <p>
-              Streamline documentation, research, reporting and executive
-              support with highly trained Kenyan virtual assistants.
+              Keep correspondence, communication and important follow-ups
+              moving without having to keep every conversation in your head.
             </p>
+
           </div>
 
+
           <div className="problem-card">
-            <h3>Scaling without overhead</h3>
+
+            <span className="problem-number">03</span>
+
+            <h3>Have the information when you need it.</h3>
+
             <p>
-              Access professional executive support without the cost of hiring
-              full-time in-house administrative staff.
+              Research, reports and organised information can be prepared
+              thoughtfully, giving you a clearer starting point for your
+              next decision.
             </p>
+
+          </div>
+
+
+          <div className="problem-card">
+
+            <span className="problem-number">04</span>
+
+            <h3>Let the details happen in the background.</h3>
+
+            <p>
+              Documentation, files, spreadsheets and everyday administration
+              can be handled with care, so they don't continually compete
+              for your attention.
+            </p>
+
           </div>
 
         </div>
 
+
         <div className="cta-panel">
-          <h3>Work smarter with purpose.</h3>
+
+          <p className="section-tag">WHEN YOU'RE READY</p>
+
+          <h3>
+            Perhaps it's time to stop doing everything yourself.
+          </h3>
 
           <p>
-            Whether you're building a startup or managing a growing business,
-            VAnia connects you with professionals who help you operate more
-            efficiently every day.
+            You don't need to know exactly what to delegate before you speak
+            with us. Let's have a conversation about your priorities and
+            where thoughtful support could give you back some room.
           </p>
 
           <div className="cta-buttons">
-            <Link to="/assistants" className="btn-primary text-center">
-              Find an Assistant
-            </Link>
 
-            <Link to="/services" className="btn-outline">
-              Explore Services
-            </Link>
+            <Link
+              to="/services"
+              className="btn-primary text-center"
+            >
+              see how we can help            </Link>
+
+            {/* <Link
+              to="/services"
+              className="btn-outline"
+            >
+              See How We Can Help
+            </Link> */}
+
           </div>
+
         </div>
 
       </div>
+
     </section>
   );
 };

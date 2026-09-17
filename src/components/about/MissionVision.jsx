@@ -45,7 +45,7 @@ const MissionVision = () => {
                  </div>
                 <h3>Brand Promise</h3>
                 <p>
-                    VAnia is not simply selling hours. it sells Time + Intelligence + Reliability + Initiative + Peace of Mind.
+                    VAnia is not simply selling hours. It sells Time + Intelligence + Reliability + Initiative + Peace of Mind.
                 </p>
            
 

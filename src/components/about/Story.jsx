@@ -14,7 +14,7 @@ const Story = () => {
         <div className="story-right">
           <p>
             VAnia Assist is a Kenya-based executive virtual assistance company
-            founded on one simple belief: exceptional support should create
+            founded on one simple belief: Exceptional support should create
             meaningful impact for both businesses and professionals.
           </p>
 

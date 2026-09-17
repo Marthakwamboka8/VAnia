@@ -1,28 +1,43 @@
-const heroData = [
+const heroSlides = [
   {
     id: 1,
-    title: "Virtual Assistance With Purpose",
-    description:
-      "Connect with verified virtual assistants for executive support, administration, customer service and business operations.",
-    button: "Hire an Assistant",
     image: "/images/hero-1.webp",
+    title: "You have enough to think about.",
+    description:
+      "Let VAnia take care of the details that don't need to sit on your desk, so you can give your attention to the work that truly matters.",
+    button: "Word from our CEO",
+    link: "#company-video",
   },
+
   {
     id: 2,
-    title: "Build Your Career as a Virtual Assistant",
-    description:
-      "Create a professional profile, showcase your expertise and work with businesses across Africa and beyond.",
-    button: "Become a Virtual Assistant",
     image: "/images/hero-2.avif",
+    title: "More room to lead.",
+    description:
+      "Thoughtful remote support for the work behind your biggest priorities, delivered with care, discretion and consistency.",
+    button: "Discover How We Help",
+    link: "/bookconsultation",
   },
+
   {
     id: 3,
-    title: "One Platform. Complete Remote Collaboration.",
-    description:
-      "From hiring and messaging to project management and secure payments, VAnia simplifies remote work.",
-    button: "Explore Platform",
     image: "/images/hero-3.avif",
+    title: "Built around the way you work.",
+    description:
+      "Whether you're leading a company, advising clients or building what's next, Vania adapts to the way you work.",
+    button: "Explore Our Services",
+    link: "/services",
+  },
+
+  {
+    id: 4,
+    image: "/images/hero-4.webp",
+    title: "Exceptional support, wherever you are.",
+    description:
+      "Connecting ambitious businesses with capable Kenyan professionals who understand that great support is about more than completing tasks.",
+    button: "Get to Know Us",
+    link: "/about",
   },
 ];
 
-export default heroData;
+export default heroSlides;

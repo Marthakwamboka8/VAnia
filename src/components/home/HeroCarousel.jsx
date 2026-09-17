@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./HeroCarousel.css";
 import heroSlides from "./heroData";
 
@@ -8,19 +9,42 @@ const HeroCarousel = () => {
   useEffect(() => {
     const slide = setInterval(() => {
       setCurrent((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(slide);
   }, []);
 
-  const nextSlide = () =>
+  const nextSlide = () => {
     setCurrent((current + 1) % heroSlides.length);
+  };
 
-  const prevSlide = () =>
-    setCurrent((current - 1 + heroSlides.length) % heroSlides.length);
+  const prevSlide = () => {
+    setCurrent(
+      (current - 1 + heroSlides.length) % heroSlides.length
+    );
+  };
+
+  const handleHeroAction = (link) => {
+    // If the link is a section on the same page
+    if (link.startsWith("#")) {
+      const section = document.getElementById(link.substring(1));
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+
+      return;
+    }
+
+    // For normal pages, React Router Link handles navigation
+  };
 
   return (
     <section className="hero">
+
       {heroSlides.map((item, index) => (
         <div
           key={item.id}
@@ -28,41 +52,79 @@ const HeroCarousel = () => {
             index === current ? "slide active" : "slide"
           }
         >
-          <img src={item.image} alt={item.title} />
+
+          <img
+            src={item.image}
+            alt={item.title}
+          />
 
           <div className="overlay"></div>
 
           <div className="content">
-            <span className="tag">VAnia</span>
+
+            <span className="tag">Vania</span>
 
             <h1>{item.title}</h1>
 
             <p>{item.description}</p>
 
-            <button>{item.button}</button>
+            {item.link.startsWith("#") ? (
+              <button
+                type="button"
+                onClick={() => handleHeroAction(item.link)}
+              >
+                {item.button}
+              </button>
+            ) : (
+              <Link
+                to={item.link}
+                className="hero-button"
+              >
+                {item.button}
+              </Link>
+            )}
+
           </div>
         </div>
       ))}
 
-      <button className="arrow left" onClick={prevSlide}>
+      {/* Previous slide */}
+      <button
+        className="arrow left"
+        onClick={prevSlide}
+        aria-label="Previous slide"
+        type="button"
+      >
         &#10094;
       </button>
 
-      <button className="arrow right" onClick={nextSlide}>
+      {/* Next slide */}
+      <button
+        className="arrow right"
+        onClick={nextSlide}
+        aria-label="Next slide"
+        type="button"
+      >
         &#10095;
       </button>
 
+      {/* Slide indicators */}
       <div className="dots">
         {heroSlides.map((_, index) => (
-          <span
+          <button
             key={index}
-            className={index === current ? "dot active" : "dot"}
+            type="button"
+            className={
+              index === current ? "dot active" : "dot"
+            }
             onClick={() => setCurrent(index)}
-          ></span>
+            aria-label={`Go to slide ${index + 1}`}
+          ></button>
         ))}
       </div>
+
     </section>
   );
 };
-export default HeroCarousel;
 
+export default HeroCarousel;
