@@ -25,9 +25,9 @@ const Navbar = () => {
 
         {/* Desktop Actions */}
         <div className="nav-actions">
-          <button type="button" className="btn-outline">
-            join our team
-          </button>
+         <Link to="/joinourteam" className="btn-primary">
+            Join our team
+          </Link>
 
           <Link to="/bookconsultation" className="btn-primary">
             Get Started
@@ -77,9 +77,13 @@ const Navbar = () => {
           About
         </Link>
 
-        <button type="button" className="btn-outline">
-          join our team
-        </button>
+        <Link
+          to="/joinourteam"
+          className="btn-primary"
+          onClick={() => setMenuOpen(false)}
+        >
+          Join our team
+        </Link>
 
         <Link
           to="/bookconsultation"

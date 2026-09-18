@@ -62,7 +62,7 @@ const HeroCarousel = () => {
 
           <div className="content">
 
-            <span className="tag">Vania</span>
+            <span className="tag">VAnia</span>
 
             <h1>{item.title}</h1>
 

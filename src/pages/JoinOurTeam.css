@@ -1,0 +1,350 @@
+.join-team {
+  width: 100%;
+  background: #f7f7f5;
+  color: #2f241f;
+}
+
+/* HERO */
+
+.join-hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.join-hero-content {
+  max-width: 900px;
+}
+
+.section-label {
+  margin: 0 0 18px;
+  color: #d9480f;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.join-hero h1 {
+  margin: 0 0 30px;
+  color: #4a2a1a;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.5rem;
+  line-height: 1.08;
+  font-weight: 600;
+}
+
+.join-hero-content > p:not(.section-label) {
+  max-width: 720px;
+  margin: 0 auto 35px;
+  color: #5c514a;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.join-button {
+  display: inline-block;
+  padding: 15px 28px;
+  border-radius: 8px;
+  background: #1f6b3a;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.join-button:hover {
+  background: #18562f;
+  transform: translateY(-2px);
+}
+
+
+/* SECTION HEADING */
+
+.team-section-heading {
+  max-width: 750px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.team-section-heading h2 {
+  margin: 0 0 20px;
+  color: #4a2a1a;
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.team-section-heading > p:last-child {
+  margin: 0 auto;
+  color: #5c514a;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+/* WHY VANIA */
+
+.why-vania-team {
+  padding: 110px 20px;
+  background: #ffffff;
+}
+
+.team-values {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #e8e3dd;
+  border: 1px solid #e8e3dd;
+}
+
+.team-value {
+  padding: 45px;
+  background: #ffffff;
+}
+
+.team-value span,
+.role-card span,
+.process-step span {
+  display: block;
+  margin-bottom: 22px;
+  color: #d9480f;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.team-value h3,
+.role-card h3,
+.process-step h3 {
+  margin: 0 0 14px;
+  color: #4a2a1a;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.team-value p,
+.role-card p,
+.process-step p {
+  margin: 0;
+  color: #5c514a;
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+
+/* WHO WE NEED */
+
+.who-we-need {
+  padding: 120px 20px;
+  background: #4a2a1a;
+}
+
+.who-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.who-we-need .section-label {
+  color: #d9480f;
+}
+
+.who-we-need h2 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.3rem;
+  line-height: 1.12;
+  font-weight: 600;
+}
+
+.who-text > p {
+  margin: 0 0 20px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.who-text > p:first-child {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.qualities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.qualities span {
+  padding: 9px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+}
+
+
+/* OPPORTUNITIES */
+
+.opportunities {
+  padding: 110px 20px;
+  background: #f7f7f5;
+}
+
+.role-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.role-card {
+  padding: 38px;
+  border: 1px solid #e8e3dd;
+  border-radius: 14px;
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(74, 42, 26, 0.08);
+}
+
+
+/* PROCESS */
+
+.joining-process {
+  padding: 110px 20px;
+  background: #ffffff;
+}
+
+.process-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #e8e3dd;
+  border: 1px solid #e8e3dd;
+}
+
+.process-step {
+  min-height: 260px;
+  padding: 35px;
+  background: #ffffff;
+}
+
+
+/* CTA */
+
+.join-cta {
+  padding: 130px 20px;
+  background: #f7f7f5;
+  text-align: center;
+}
+
+.join-cta h2 {
+  margin: 0 0 25px;
+  color: #4a2a1a;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.join-cta > p:not(.section-label) {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  color: #5c514a;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .join-hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .who-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 700px) {
+  .join-hero {
+    min-height: auto;
+    padding: 80px 20px;
+  }
+
+  .join-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .join-hero-content > p:not(.section-label) {
+    font-size: 0.95rem;
+  }
+
+  .team-section-heading h2 {
+    font-size: 2.2rem;
+  }
+
+  .why-vania-team,
+  .opportunities,
+  .joining-process {
+    padding: 75px 20px;
+  }
+
+  .team-values,
+  .role-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-value,
+  .role-card,
+  .process-step {
+    padding: 30px;
+  }
+
+  .who-we-need {
+    padding: 80px 20px;
+  }
+
+  .who-we-need h2 {
+    font-size: 2.5rem;
+  }
+
+  .join-cta {
+    padding: 90px 20px;
+  }
+
+  .join-cta h2 {
+    font-size: 2.6rem;
+  }
+}
