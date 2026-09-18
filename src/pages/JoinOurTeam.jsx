@@ -276,15 +276,15 @@ const JoinOurTeam = () => {
 
   <div className="cv-instruction">
     <p>
-      Send your CV to
+      Send your CV to  
     </p>
 
-    <a href="mailto:info@vaniaassist.com">
-      info@vaniaassist.com
+    <a href="mailto:talent@vaniaassist.com">
+      talent@vaniaassist.com
     </a>
 
     <span>
-      Please include the role you're interested in as the subject of
+        Please include the role you're interested in as the subject of
       your email.
     </span>
   </div>

@@ -276,6 +276,45 @@
   font-size: 1rem;
   line-height: 1.8;
 }
+.cv-instruction {
+  max-width: 600px;
+  margin: 40px auto 0;
+  padding: 35px 30px;
+  border: 1px solid #e8e3dd;
+  border-radius: 12px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.cv-instruction p {
+  margin: 0 0 12px;
+  color: #5c514a;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.cv-instruction a {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #1f6b3a;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.cv-instruction a:hover {
+  color: #d9480f;
+}
+
+.cv-instruction span {
+  display: block;
+  margin-top: 5px;
+  color: #5c514a;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
 
 
 /* MOBILE */
