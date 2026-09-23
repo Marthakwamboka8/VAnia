@@ -18,7 +18,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="nav-links">
           <Link to="/">Home</Link>
-          <Link to="/bookconsultation">Book Consultation</Link>
+          <Link to="/whyania">Why VAnia ?</Link>
           <Link to="/services">Services</Link>
           <Link to="/about">About</Link>
         </nav>
