@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import "./WhyVania.css";
-
+import Navbar from "../components/layout/Navbar";
 const WhyVania = () => {
   const reasons = [
     {
@@ -58,6 +59,8 @@ const WhyVania = () => {
   ];
 
   return (
+    <>
+      <Navbar />
     <main className="why-vania">
 
       {/* HERO */}
@@ -170,16 +173,18 @@ const WhyVania = () => {
             Let VAnia handle the details while you focus on leading,
             building, and growing.
           </p>
-          <a href="/bookconsultation" className="btn-primary">
-  Book a Consultation
-</a>
+ <Link to="/bookconsultation" className="btn-primary">
+            Get Started
+          </Link>
 
           
         </div>
       </section>
 
     </main>
+    </>
   );
 };
+
 
 export default WhyVania;

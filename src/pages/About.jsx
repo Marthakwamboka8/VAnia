@@ -22,7 +22,7 @@ const About = () => {
 
             <p className="hero-text">
            VAnia Assist is a Kenya-based executive assistance company providing highly
-           capable, professionally trained Kenyan Virtual Assitants to founders, executivies, consultants,
+           capable, professionally trained Kenyan Virtual Assistants to founders, executives, consultants,
            investors and growing businesses globally.
            <br/>
 
