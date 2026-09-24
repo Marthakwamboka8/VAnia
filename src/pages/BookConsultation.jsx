@@ -31,8 +31,16 @@ const BookConsultation = () => {
     setStatus("");
 
     try {
+      // Use the API URL from the environment variable
+      const API_URL = import.meta.env.VITE_API_URL;
+
+      // Make sure the API URL exists
+      if (!API_URL) {
+        throw new Error("API URL is not configured.");
+      }
+
       const response = await fetch(
-        "http://localhost:5000/api/consultation",
+        `${API_URL}/api/consultation`,
         {
           method: "POST",
           headers: {
@@ -50,11 +58,12 @@ const BookConsultation = () => {
         );
       }
 
+      // Successful submission
       setStatus(
         "Your consultation request has been sent successfully!"
       );
 
-      // Clear form after successful submission
+      // Clear the form
       setFormData({
         name: "",
         company: "",
@@ -92,9 +101,9 @@ const BookConsultation = () => {
           </h1>
 
           <p>
-            You don't need to have everything figured out before you reach out.
-            Tell us a little about your business, your priorities, and what's
-            taking up more of your time than it should.
+            You don't need to have everything figured out before you reach
+            out. Tell us a little about your business, your priorities, and
+            what's taking up more of your time than it should.
           </p>
         </section>
 
@@ -108,7 +117,9 @@ const BookConsultation = () => {
 
             <div className="process-card">
               <span>01</span>
+
               <h3>Tell us about your needs</h3>
+
               <p>
                 Share a little about your business, your responsibilities,
                 and where you'd like more support.
@@ -117,7 +128,9 @@ const BookConsultation = () => {
 
             <div className="process-card">
               <span>02</span>
+
               <h3>We'll understand your priorities</h3>
+
               <p>
                 We'll take the time to understand how you work and what kind
                 of assistance would genuinely make a difference.
@@ -126,7 +139,9 @@ const BookConsultation = () => {
 
             <div className="process-card">
               <span>03</span>
+
               <h3>We'll explore the right fit</h3>
+
               <p>
                 Together, we'll explore the kind of support that makes sense
                 for your situation.
@@ -135,7 +150,9 @@ const BookConsultation = () => {
 
             <div className="process-card">
               <span>04</span>
+
               <h3>You decide when you're ready</h3>
+
               <p>
                 No pressure. Just a clear conversation about what's possible
                 and what comes next.
@@ -165,7 +182,9 @@ const BookConsultation = () => {
             <div className="form-row">
 
               <div className="form-group">
-                <label htmlFor="name">Your name</label>
+                <label htmlFor="name">
+                  Your name
+                </label>
 
                 <input
                   type="text"
@@ -179,7 +198,9 @@ const BookConsultation = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="company">Company</label>
+                <label htmlFor="company">
+                  Company
+                </label>
 
                 <input
                   type="text"
@@ -196,7 +217,9 @@ const BookConsultation = () => {
             <div className="form-row">
 
               <div className="form-group">
-                <label htmlFor="email">Email address</label>
+                <label htmlFor="email">
+                  Email address
+                </label>
 
                 <input
                   type="email"
@@ -210,13 +233,15 @@ const BookConsultation = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="phone">Phone number</label>
+                <label htmlFor="phone">
+                  Phone number
+                </label>
 
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
-                  placeholder="start with country code"
+                  placeholder="Start with country code"
                   value={formData.phone}
                   onChange={handleChange}
                 />
@@ -235,7 +260,9 @@ const BookConsultation = () => {
                 value={formData.support}
                 onChange={handleChange}
               >
-                <option value="">Select an option</option>
+                <option value="">
+                  Select an option
+                </option>
 
                 <option value="executive-support">
                   Executive support
@@ -298,7 +325,7 @@ const BookConsultation = () => {
 
           </form>
         </section>
- 
+
       </main>
     </>
   );

@@ -73,7 +73,8 @@ const Footer = () => {
 
             <p>Nairobi, Kenya</p>
             <a href="mailto:info@vaniaassist.com">
-              info@vaniaassist.com
+              info@vaniaassist.com <br/>
+              hello@vaniaassist.com
             </a>
 
             <h4 className="social-heading">Follow VAnia</h4>

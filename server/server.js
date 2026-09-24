@@ -7,9 +7,13 @@ dotenv.config();
 
 const app = express();
 const PORT = 5000;
-
 app.use(cors());
 app.use(express.json());
+
+app.use((req, res, next) => {
+  console.log(`➡️ ${req.method} ${req.url}`);
+  next();
+});
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
@@ -26,8 +30,12 @@ app.get("/", (req, res) => {
     message: "VAnia backend is running successfully!",
   });
 });
-
 app.post("/api/consultation", async (req, res) => {
+  console.log("=================================");
+  console.log("📩 Consultation request received!");
+  console.log("Form data:", req.body);
+  console.log("=================================");
+
   try {
     const {
       name,
@@ -38,11 +46,18 @@ app.post("/api/consultation", async (req, res) => {
       message,
     } = req.body;
 
+    // Check required fields
     if (!name || !email || !message) {
+      console.log("❌ Missing required fields.");
+
       return res.status(400).json({
-        message: "Please fill in your name, email and message.",
+        message:
+          "Please fill in your name, email and message.",
       });
     }
+
+    console.log("✅ Required fields are present.");
+    console.log("📧 Attempting to send email...");
 
     await transporter.sendMail({
       from: `"Vania Assist" <info@vaniaassist.com>`,
@@ -68,7 +83,10 @@ app.post("/api/consultation", async (req, res) => {
             through the VAnia Assist website.
           </p>
 
-          <hr style="border: none; border-top: 1px solid #E8E3DD;" />
+          <hr style="
+            border: none;
+            border-top: 1px solid #E8E3DD;
+          " />
 
           <h3 style="color: #4A2A1A;">
             Contact Details
@@ -79,7 +97,8 @@ app.post("/api/consultation", async (req, res) => {
           </p>
 
           <p>
-            <strong>Company:</strong> ${company || "Not provided"}
+            <strong>Company:</strong>
+            ${company || "Not provided"}
           </p>
 
           <p>
@@ -87,7 +106,8 @@ app.post("/api/consultation", async (req, res) => {
           </p>
 
           <p>
-            <strong>Phone:</strong> ${phone || "Not provided"}
+            <strong>Phone:</strong>
+            ${phone || "Not provided"}
           </p>
 
           <p>
@@ -108,7 +128,10 @@ app.post("/api/consultation", async (req, res) => {
             ${message}
           </div>
 
-          <hr style="border: none; border-top: 1px solid #E8E3DD;" />
+          <hr style="
+            border: none;
+            border-top: 1px solid #E8E3DD;
+          " />
 
           <p style="
             color: #5C514A;
@@ -122,7 +145,7 @@ app.post("/api/consultation", async (req, res) => {
       `,
     });
 
-    console.log("Email sent successfully.");
+    console.log("✅ Email sent successfully.");
 
     return res.status(200).json({
       message:
@@ -130,7 +153,7 @@ app.post("/api/consultation", async (req, res) => {
     });
 
   } catch (error) {
-    console.error("Email error:", error);
+    console.error("❌ Email error:", error);
 
     return res.status(500).json({
       message:
