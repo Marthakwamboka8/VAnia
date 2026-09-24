@@ -170,7 +170,7 @@ const WhyVania = () => {
             Let VAnia handle the details while you focus on leading,
             building, and growing.
           </p>
-          <a href="/bookconsultation" className="why-cta">
+          <a href="/bookconsultation" className="btn-primary">
   Book a Consultation
 </a>
 
