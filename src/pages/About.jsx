@@ -21,14 +21,16 @@ const About = () => {
             <h1>Virtual Assistance With Purpose.</h1>
 
             <p className="hero-text">
-           VAnia assist is a Kenya-based executive assistane company providing highly
+           VAnia Assist is a Kenya-based executive assistance company providing highly
            capable, professionally trained Kenyan Virtual Assitants to founders, executivies, consultants,
            investors and growing businesses globally.
+           <br/>
 
-           The company goes beyond traditional Virtual assistance. VAnia assist will position its assistants
-           as remote executive partners who anticipate nedds, manage priorities, protect executive time and help clients operate more efficiently.
+           The company goes beyond traditional Virtual assistance. Our assistants operates
+           as remote executive partners who anticipate needs, manage priorities, protect executives' time and help clients operate more efficiently.
+           <br/>
 
-           "VAnia assist gives busy executives back their time by providing intelligent, proactive and dependable remote executive support from Kenya "
+          <b>VAnia Assist gives busy executives back their time by providing intelligent, proactive and dependable remote executive support from Kenya </b>
 
             </p>
           </div>

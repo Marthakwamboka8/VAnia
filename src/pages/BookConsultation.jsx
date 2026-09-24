@@ -216,7 +216,7 @@ const BookConsultation = () => {
                   type="tel"
                   id="phone"
                   name="phone"
-                  placeholder="+254 ..."
+                  placeholder="start with country code"
                   value={formData.phone}
                   onChange={handleChange}
                 />

@@ -24,7 +24,7 @@ const heroSlides = [
     image: "/images/hero-3.avif",
     title: "Built around the way you work.",
     description:
-      "Whether you're leading a company, advising clients or building what's next, Vania adapts to the way you work.",
+      "Whether you're leading a company, advising clients or building what's next, VAnia adapts to the way you work.",
     button: "Explore Our Services",
     link: "/services",
   },
