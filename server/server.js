@@ -2,19 +2,38 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
+import path from "path";
+import { fileURLToPath } from "url";
 
-dotenv.config();
+// Get the directory where this server.js file is located
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Load .env from the VAnia project root
+dotenv.config({
+  path: path.resolve(__dirname, "../.env"),
+});
+
+// Check that the environment variables are loading
+console.log("SMTP_HOST:", process.env.SMTP_HOST);
+console.log("SMTP_PORT:", process.env.SMTP_PORT);
+console.log("SMTP_SECURE:", process.env.SMTP_SECURE);
+console.log("SMTP_USER:", process.env.SMTP_USER);
+console.log("SMTP_PASS loaded:", Boolean(process.env.SMTP_PASS));
 
 const app = express();
 const PORT = 5000;
+
 app.use(cors());
 app.use(express.json());
 
+// Request logger
 app.use((req, res, next) => {
   console.log(`➡️ ${req.method} ${req.url}`);
   next();
 });
 
+// Zoho SMTP transporter
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
   port: Number(process.env.SMTP_PORT),
@@ -25,11 +44,23 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// Test SMTP connection when server starts
+transporter.verify((error, success) => {
+  if (error) {
+    console.error("❌ SMTP connection failed:", error);
+  } else {
+    console.log("✅ Zoho SMTP connection is ready.");
+  }
+});
+
+// Backend health check
 app.get("/", (req, res) => {
   res.json({
     message: "VAnia backend is running successfully!",
   });
 });
+
+// Consultation form
 app.post("/api/consultation", async (req, res) => {
   console.log("=================================");
   console.log("📩 Consultation request received!");
@@ -162,6 +193,7 @@ app.post("/api/consultation", async (req, res) => {
   }
 });
 
+// Start server
 app.listen(PORT, () => {
   console.log(
     `VAnia backend running on http://localhost:${PORT}`

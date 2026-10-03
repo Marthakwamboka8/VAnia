@@ -1,8 +1,8 @@
 import "./Footer.css";
 import Logo from "./Logo";
+import { Link } from "react-router-dom";
 
 import {
-  FaYoutube,
   FaInstagram,
   FaTiktok,
   FaLinkedinIn,
@@ -13,7 +13,6 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const socialLinks = [
-   
     {
       name: "Instagram",
       url: "https://www.instagram.com/vania.assist?stkn=NnI0am9sc3AzMzc%3D&utm_source=qr",
@@ -44,6 +43,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
+
         <div className="footer-top">
 
           {/* Brand section */}
@@ -52,8 +52,8 @@ const Footer = () => {
 
             <p>
               Virtual Assistance With Purpose. Connecting businesses with
-              skilled Kenyan virtual assistants through a professional and secure
-              collaboration platform.
+              skilled Kenyan virtual assistants through a professional and
+              secure collaboration platform.
             </p>
           </div>
 
@@ -61,10 +61,10 @@ const Footer = () => {
           <div className="footer-links">
             <h4>Platform</h4>
 
-            <a href="/">Home</a>
-            <a href="/bookconsultation">Book Consultation</a>
-            <a href="/services">Services</a>
-            <a href="/about">About</a>
+            <Link to="/">Home</Link>
+            <Link to="/book-consultation">Book Consultation</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/about">About</Link>
           </div>
 
           {/* Contact and social links */}
@@ -72,8 +72,12 @@ const Footer = () => {
             <h4>Contact</h4>
 
             <p>Nairobi, Kenya</p>
+
             <a href="mailto:info@vaniaassist.com">
-              info@vaniaassist.com <br/>
+              info@vaniaassist.com
+            </a>
+
+            <a href="mailto:hello@vaniaassist.com">
               hello@vaniaassist.com
             </a>
 
@@ -98,8 +102,9 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 Vania. All rights reserved.</p>
+          <p>© 2026 VAnia. All rights reserved.</p>
         </div>
+
       </div>
     </footer>
   );

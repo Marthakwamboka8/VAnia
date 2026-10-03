@@ -86,12 +86,12 @@ const Navbar = () => {
         </Link>
 
         <Link
-          to="/bookconsultation"
-          className="btn-primary"
-          onClick={() => setMenuOpen(false)}
-        >
-          Get Started
-        </Link>
+  to="/book-consultation"
+  className="btn-primary"
+  onClick={() => setMenuOpen(false)}
+>
+  Get Started
+</Link>
 
       </div>
     </header>
