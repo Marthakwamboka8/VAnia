@@ -1,7 +1,7 @@
 const heroSlides = [
   {
     id: 1,
-    image: "/images/hero-1.webp",
+    image: "/images/more room to lead.jpeg",
     title: "You have enough to think about.",
     description:
       "Let VAnia take care of the details that don't need to sit on your desk, so you can give your attention to the work that truly matters.",
@@ -11,7 +11,7 @@ const heroSlides = [
 
   {
     id: 2,
-    image: "/images/hero-2.avif",
+    image: "/images/executive.jpeg",
     title: "More room to lead.",
     description:
       "Thoughtful remote support for the work behind your biggest priorities, delivered with care, discretion and consistency.",
@@ -21,7 +21,7 @@ const heroSlides = [
 
   {
     id: 3,
-    image: "/images/hero-3.avif",
+    image: "/images/build.jpeg",
     title: "Built around the way you work.",
     description:
       "Whether you're leading a company, advising clients or building what's next, VAnia adapts to the way you work.",
@@ -31,7 +31,7 @@ const heroSlides = [
 
   {
     id: 4,
-    image: "/images/hero-4.webp",
+    image: "/images/think about.jpeg",
     title: "Exceptional support, wherever you are.",
     description:
       "Connecting ambitious businesses with capable Kenyan professionals who understand that great support is about more than completing tasks.",
