@@ -57,10 +57,10 @@ const Navbar = () => {
         </Link>
 
         <Link
-          to="/bookconsultation"
+          to="/whyania"
           onClick={() => setMenuOpen(false)}
         >
-          Book Consultation
+          Why VAnia ?
         </Link>
 
         <Link
