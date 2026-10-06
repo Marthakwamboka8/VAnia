@@ -1,7 +1,7 @@
 const heroSlides = [
   {
     id: 1,
-    image: "/images/more room to lead.jpeg",
+    image: "/images/more room for growth.jpeg",
     title: "You have enough to think about.",
     description:
       "Let VAnia take care of the details that don't need to sit on your desk, so you can give your attention to the work that truly matters.",
@@ -11,7 +11,7 @@ const heroSlides = [
 
   {
     id: 2,
-    image: "/images/executive.jpeg",
+    image: "/images/executive1.jpeg",
     title: "More room to lead.",
     description:
       "Thoughtful remote support for the work behind your biggest priorities, delivered with care, discretion and consistency.",
@@ -21,7 +21,7 @@ const heroSlides = [
 
   {
     id: 3,
-    image: "/images/build.jpeg",
+    image: "/images/build1 (1).jpeg",
     title: "Built around the way you work.",
     description:
       "Whether you're leading a company, advising clients or building what's next, VAnia adapts to the way you work.",
